@@ -1,0 +1,3 @@
+include:
+  - local: '/jobs/dlang/codestyle.yml'
+  - local: '/jobs/dlang/syntax_check.yml'

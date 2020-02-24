@@ -1,0 +1,4 @@
+syntax_check:
+  stage: check
+  image: aurorafossorg/dlang:latest
+  script: dscanner -s .

@@ -1,0 +1,5 @@
+codestyle:
+  stage: check
+  image: aurorafossorg/dlang:latest
+  script: dscanner -S .
+  allow_failure: true
