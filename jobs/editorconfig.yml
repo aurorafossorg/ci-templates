@@ -1,0 +1,14 @@
+editorconfig:
+  stage: check
+  image: node:latest
+  cache:
+    paths:
+      - node_modules/
+  script: |
+    if [ -f ".editorconfig" ]; then
+      npm install eclint
+      npx eclint check "{,src/**/}{meson.build,*.{c,cpp,d,java,scala,json,yml}}"
+    else
+      echo "--> No '.editorconfig' file found, skip."
+    fi
+  allow_failure: true
