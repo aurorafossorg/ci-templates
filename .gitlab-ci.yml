@@ -1,0 +1,12 @@
+image: aurorafossorg/archlinux:latest
+
+stages:
+  - check
+  - build
+  - test
+  - production
+  - deploy
+
+include:
+  - template: License-Management.gitlab-ci.yml
+  - local: 'jobs/editorconfig.yml'
