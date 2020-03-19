@@ -7,7 +7,9 @@ editorconfig:
   script: |
     if [ -f ".editorconfig" ]; then
       npm install eclint
-      npx eclint check "{,src/**/}{meson.build,*.{c,cpp,d,java,scala,json,yml}}"
+      npx eclint check "{,**/}{,\
+    Dockerfile,meson.build,*.{,\
+    c,cpp,d,java,scala,json,yml,php}}"
     else
       echo "--> No '.editorconfig' file found, skip."
     fi
