@@ -1,3 +1,4 @@
 include:
   - local: '/jobs/dlang/codestyle.yml'
-  - local: '/jobs/dlang/syntax_check.yml'
+  - local: '/jobs/dlang/syntax.yml'
+  - local: '/jobs/dlang/formatter.yml'

@@ -1,4 +1,4 @@
-codestyle:
+dlang_codestyle:
   stage: check
   image: aurorafossorg/dlang:latest
   script: dscanner -S .

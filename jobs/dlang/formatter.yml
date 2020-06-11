@@ -1,0 +1,14 @@
+dlang_formatter:
+  stage: check
+  image: aurorafossorg/dlang:latest
+  script: |
+    dfmt .
+    for file in `git diff --name-only | grep ".d$"`; do
+      echo "File '$file' need to be formatted."
+      DFMT_FILE_FOUND=1
+    done
+
+    if [ "$DFMT_FILE_FOUND" == "1" ]; then
+      exit 1;
+    fi
+  allow_failure: true
