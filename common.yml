@@ -1,0 +1,4 @@
+include:
+  - template: License-Management.gitlab-ci.yml
+  - template: Jobs/Code-Quality.gitlab-ci.yml
+  - template: Dependency-Scanning.gitlab-ci.yml

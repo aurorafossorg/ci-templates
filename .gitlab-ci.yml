@@ -8,5 +8,5 @@ stages:
   - deploy
 
 include:
-  - template: License-Management.gitlab-ci.yml
+  - local: 'common.yml'
   - local: 'jobs/editorconfig.yml'
