@@ -5,8 +5,12 @@ editorconfig:
     paths:
       - node_modules/
   script: |
-    if [ -f ".editorconfig" ]; then
+    if [ ! -f "package.json" ]; then
       npm install eclint
+      rm -rf package.json
+    fi
+
+    if [ -f ".editorconfig" ]; then
       npx eclint check "{,**/}{,\
     Dockerfile,meson.build,*.{,\
     c,cpp,d,java,scala,json,yml,php}}"
